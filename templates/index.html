@@ -9,21 +9,40 @@
       font-family: Arial, sans-serif;
       padding: 20px;
     }
-    #project-list > div {
-      padding: 10px;
+    #project-info {
+      padding: 15px;
       border: 1px solid #ccc;
-      margin-bottom: 10px;
-      border-radius: 5px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    #project-info span {
+      display: inline-block;
+      margin-right: 10px;
     }
     button {
-      margin-left: 10px;
+      margin: 5px 10px;
+      padding: 5px 10px;
     }
   </style>
 </head>
 <body>
-  <h1>🛠️ Project Control Dashboard</h1>
-  <div id="project-list">
-    <!-- سيتم ملء المشاريع هنا تلقائيًا -->
+  <h1>🛠️ Project Control Dashboard (Portable)</h1>
+
+  <h2>➕ Add New Project</h2>
+<form id="add-form" onsubmit="addProject(event)">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="text" id="type" placeholder="Type (flask/python/node/...)" required>
+  <input type="text" id="path" placeholder="Path (absolute or relative)" required>
+  <input type="text" id="entry" placeholder="Entry file (e.g. main.py)" required>
+  <input type="number" id="port" placeholder="Port" required>
+  <button type="submit">➕ Add</button>
+</form>
+
+
+  <div id="project-info">
+    <div id="project-list"></div>
+    <!-- تفاصيل المشروع سيتم عرضها هنا -->
   </div>
+
 </body>
 </html>
