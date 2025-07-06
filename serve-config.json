@@ -1,0 +1,7 @@
+{
+  "name": "My Local Project",   
+  "type": "flask",                     
+  "entry": "main.py",            
+  "port": 5610,                        
+  "relative_path": ".."               
+}
